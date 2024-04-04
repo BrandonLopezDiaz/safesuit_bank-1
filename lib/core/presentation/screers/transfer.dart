@@ -20,7 +20,7 @@ Future<void> _showNotification() async {
       ?.requestNotificationsPermission();
 
   const AndroidNotificationDetails androidPlatformChannelSpecifics =
-      AndroidNotificationDetails('1', 'NopalBank',
+      AndroidNotificationDetails('1', 'SafesuitBank',
           importance: Importance.max, priority: Priority.high);
 
   const NotificationDetails platformChannelSpecifics =
