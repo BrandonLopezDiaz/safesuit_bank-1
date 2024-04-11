@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:safesuit_bank/core/presentation/screers/movimientos.dart';
 import 'package:safesuit_bank/core/presentation/screers/transfer.dart';
 import 'package:safesuit_bank/core/presentation/widgets/card_widget.dart';
 import 'package:safesuit_bank/main.dart';
@@ -36,8 +37,10 @@ class HomeView extends StatelessWidget {
             }),
         ListTile(
           leading: const Icon(Icons.arrow_back),
-          title: const Text('Recibir'),
-        ),
+          title: const Text('Movimientos'),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Movs()));
+          }),
         ListTile(
           leading: const Icon(Icons.credit_card),
           title: const Text('Tarjeta'),
