@@ -41,7 +41,7 @@ class HomeView extends StatelessWidget {
           leading: const Icon(Icons.arrow_back),
           title: const Text('Movimientos'),
           onTap: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Movs()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => TransactionView()));
           }),
         ListTile(
           leading: const Icon(Icons.credit_card),

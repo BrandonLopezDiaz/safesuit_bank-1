@@ -1,21 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(Movs());
-
-class Movs extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Transaction View',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: TransactionView(),
-    );
-  }
-}
-
 class TransactionView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -28,6 +12,12 @@ class TransactionView extends StatelessWidget {
               fontSize: 28, color: Color.fromARGB(255, 242, 244, 250)),
         ),
         backgroundColor: Color.fromARGB(255, 66, 79, 120),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
       ),
       body: ListView(
         children: <Widget>[
@@ -76,7 +66,6 @@ class TransactionView extends StatelessWidget {
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
-            
           ),
         ),
         Column(
