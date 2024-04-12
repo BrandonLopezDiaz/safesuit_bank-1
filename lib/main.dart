@@ -4,6 +4,7 @@ import 'package:safesuit_bank/core/presentation/screers/home.dart';
 import 'package:safesuit_bank/core/presentation/screers/transfer.dart';
 
 
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   initializeNotifications();
