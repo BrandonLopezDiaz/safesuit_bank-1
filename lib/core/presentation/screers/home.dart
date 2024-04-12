@@ -89,11 +89,11 @@ class HomeView extends StatelessWidget {
                           fontSize: 20,
                         ),
                       ),
-                      Text('______________',
+                      Text('Paypal -\$90.00',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.normal,
                           ))
                     ],
                   ),
