@@ -35,41 +35,7 @@ class BankCardWidget extends StatelessWidget {
               ),
             ),
           ),
-          Align(
-          alignment: Alignment.topLeft,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start, 
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'SafeSuit Bank',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 1), // separación
-              Text(
-                'Visionary',
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 15,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
-            ],
-          ),
-        ),
-          Align(
-            alignment: Alignment.topRight,
-            child: Image.asset('assets/images/6404100.png', width: 50),
-          ),
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: Image.asset('assets/images/master_card.png', width: 80),
-          ),
-
+          // Agrega aquí otros widgets visuales sin valores específicos
         ],
       ),
     );
