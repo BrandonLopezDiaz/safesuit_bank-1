@@ -4,8 +4,8 @@ import 'package:safesuit_bank/core/presentation/screers/movimientos.dart';
 import 'package:safesuit_bank/core/presentation/screers/serviceCFE.dart';
 import 'package:safesuit_bank/core/presentation/screers/serviceAgua.dart';
 import 'package:safesuit_bank/core/presentation/screers/serviceTelcel.dart';
+import 'package:safesuit_bank/core/presentation/screers/PaymentQR.dart';
 import 'package:safesuit_bank/core/presentation/screers/transfer.dart';
-import 'package:safesuit_bank/core/presentation/widgets/card_widget.dart';
 import 'package:safesuit_bank/main.dart';
 
 class HomeView extends StatelessWidget {
@@ -154,134 +154,129 @@ class HomeView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {
-                            // Acción para Token app
-                          },
-                          borderRadius: BorderRadius.circular(8),
-                          child: Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(Icons.security, size: 40),
-                                Text(
-                                  '¡Token APP',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                )
-                              ],
-                            ),
-                            alignment: Alignment.center,
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {
-                            // Acción para Payment
-                          },
-                          borderRadius: BorderRadius.circular(8),
-                          child: Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(Icons.widgets, size: 40),
-                                Text(
-                                  'Pagos',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                )
-                              ],
-                            ),
-                            alignment: Alignment.center,
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {
-                            // Acción para Virtual Card
-                          },
-                          borderRadius: BorderRadius.circular(8),
-                          child: Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(Icons.credit_card, size: 40),
-                                Text(
-                                  'Tarjeta virtual',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                )
-                              ],
-                            ),
-                            alignment: Alignment.center,
-                          ),
-                        ),
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {
-                            // Acción para More
-                          },
-                          borderRadius: BorderRadius.circular(8),
-                          child: Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[200],
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(Icons.more_horiz, size: 40),
-                                Text(
-                                  'Más',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                )
-                              ],
-                            ),
-                            alignment: Alignment.center,
-                          ),
-                        ),
-                      ),
+                      
+              Material(
+                color: Colors.transparent,                
+                child: InkWell(
+                  onTap: () {
+                    // Acción para Token app
+                  },
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.security, size: 40 ),
+                        Text('¡Token APP',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),)
+                      ],
+                    ),
+                    
+                    alignment: Alignment.center,
+                  ),
+                ),
+              ),
+              Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () {
+                      Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => RetirarQR()));
+                  },
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.widgets, size: 40 ),
+                        Text('Retiros QR',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),)
+                      ],
+                    ),
+                    alignment: Alignment.center,
+                  ),
+                ),
+              ),
+              Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () {
+                    // Acción para Virtual Card
+                  },
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.credit_card, size: 40 ),
+                        Text('Tarjeta virtual',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),)
+                      ],
+                    ),
+                    alignment: Alignment.center,
+                  ),
+                ),
+              ),
+              Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () {
+                    // Acción para More
+                  },
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    width: 70,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.more_horiz, size: 40 ),
+                        Text('Más',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),)
+                      ],
+                    ),
+                    alignment: Alignment.center,
+                  ),
+                ),
+              ),
                     ],
                   ),
                   const SizedBox(height: 40),
@@ -394,6 +389,94 @@ class HomeView extends StatelessWidget {
             ),
             label: "Settings")
       ]),
+    );
+  }
+}
+
+class BankCardWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 180,
+      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
+      decoration: BoxDecoration(
+        color: Colors.black,
+        borderRadius: BorderRadius.circular(12.0),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black45,
+            offset: Offset(0, 4),
+            blurRadius: 10.0,
+          ),
+        ],
+      ),
+      child: Stack(
+        children: <Widget>[
+          Positioned.fill(
+            child: Opacity(
+              opacity: 0.15,
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/patron_logo.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Encabezado de la tarjeta: Nombre del banco y nivel de usuario
+          Align(
+            alignment: Alignment.topLeft,
+            child: Padding(
+              padding: EdgeInsets.only(top: 12.0), // Ajuste según sea necesario
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'SafeSuit Bank',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 4), // Ajusta el espacio según sea necesario
+                  Text(
+                    'Visionary',
+                    style: TextStyle(
+                      color: Colors.white70,
+                      fontSize: 15,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // Logotipo en la esquina superior derecha
+          Align(
+            alignment: Alignment.topRight,
+            child: Padding(
+              padding: EdgeInsets.only(top: 12.0), // Ajuste según sea necesario
+              child: Image.asset('assets/images/6404100.png', width: 50),
+            ),
+          ),
+          // Logotipo de Mastercard en la esquina inferior izquierda
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 12.0), // Ajuste según sea necesario
+              child: Image.asset('assets/images/master_card.png', width: 80),
+            ),
+          ),
+          // El resto de tus widgets como el saldo y el campo de texto aquí
+          // Asegúrate de que están correctamente posicionados y no se superponen con los nuevos elementos
+          // Puedes necesitar usar más Widgets Align o ajustar el padding de los elementos
+        ],
+      ),
     );
   }
 }
