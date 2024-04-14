@@ -43,22 +43,51 @@ class PayAguaScreen extends StatelessWidget {
       barrierDismissible: false, // El usuario debe tocar un botón para cerrar el diálogo
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Notificación enviada'),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                Text('Haz hecho una transferencia.'),
-              ],
-            ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
           ),
-          actions: <Widget>[
-            TextButton(
-              child: Text('Aceptar'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
+          contentPadding: EdgeInsets.all(20),
+          title: Center(child: Text('Pago Exitoso')),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('Recibo enviado al correo electrónico.', style: TextStyle(color: Colors.black87)),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      // Acción para descargar el comprobante
+                      print('Descargando comprobante');
+                      Navigator.of(context).pop();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white,
+                      minimumSize: Size(150, 50),
+                    ),
+                    child: Text('Descargar comprobante', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Acción para salir
+                      print('Saliendo');
+                      Navigator.of(context).pop();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.white,
+                      minimumSize: Size(150, 50),
+                    ),
+                    child: Text('Salir', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  SizedBox(height: 20),
+                ],
+              ),
+            ],
+          ),
         );
       },
     );

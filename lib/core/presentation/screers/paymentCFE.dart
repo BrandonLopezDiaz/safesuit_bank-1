@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-// Inicializo mi variable global de notificaciones
 FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
     FlutterLocalNotificationsPlugin();
 
@@ -40,25 +39,52 @@ class PayCFEScreen extends StatelessWidget {
   Future<void> showAlertDialog(BuildContext context) async {
     return showDialog<void>(
       context: context,
-      barrierDismissible: false, // El usuario debe tocar un botón para cerrar el diálogo
+      barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Notificación enviada'),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                Text('Haz hecho una transferencia.'),
-              ],
-            ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
           ),
-          actions: <Widget>[
-            TextButton(
-              child: Text('Aceptar'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
+          contentPadding: EdgeInsets.all(20),
+          title: Center(child: Text('Pago Exitoso')),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('Recibo enviado al correo electrónico.', style: TextStyle(color: Colors.black87)),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      print('Descargando comprobante');
+                      Navigator.of(context).pop();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white,
+                      minimumSize: Size(150, 50),
+                    ),
+                    child: Text('Descargar comprobante', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () {
+                      print('Saliendo');
+                      Navigator.of(context).pop();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.white,
+                      minimumSize: Size(150, 50),
+                    ),
+                    child: Text('Salir', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                  SizedBox(height: 20),
+                ],
+              ),
+            ],
+          ),
         );
       },
     );
@@ -159,7 +185,7 @@ class PayCFEScreen extends StatelessWidget {
                 onPressed: () {
                   print('Cantidad ingresada: \$983.32');
                   _showNotification();
-                  showAlertDialog(context); // Mostrar el diálogo
+                  showAlertDialog(context);
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Color.fromARGB(255, 242, 244, 250),
