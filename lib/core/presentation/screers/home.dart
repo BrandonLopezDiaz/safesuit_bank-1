@@ -98,7 +98,7 @@ class HomeView extends StatelessWidget {
                     ],
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
+                    backgroundColor: Color.fromARGB(255, 66, 79, 120),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -287,7 +287,7 @@ class HomeView extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -301,6 +301,7 @@ class HomeView extends StatelessWidget {
                         },
                         child: Container(
                           padding: EdgeInsets.all(2),
+                          
                           decoration: BoxDecoration(
                             color: Colors.grey,
                             shape: BoxShape.circle,
@@ -356,7 +357,7 @@ class HomeView extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                      height: 20), // Agrega espaciado al final si es necesario
+                      height: 50), // Agrega espaciado al final si es necesario
                 ],
               ),
             )

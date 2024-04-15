@@ -22,12 +22,12 @@ class QRCodeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            const SizedBox(height: 80),
+            const SizedBox(height: 70),
             const Text(
-              'Código QR generado exitosamente!',
+              'Código QR generado \n exitosamente!',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 28,
                 fontWeight: FontWeight.bold,
                 color: Colors.lightBlue,
               ),

@@ -8,7 +8,7 @@ class TransTelcel extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Transferencia',
+          'Pagar Telcel',
           textAlign: TextAlign.center,
           style: TextStyle(
               fontSize: 28, color: Color.fromARGB(255, 242, 244, 250)),

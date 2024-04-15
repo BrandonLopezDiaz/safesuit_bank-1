@@ -36,7 +36,7 @@ class RetirarQR extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Text(
-                      'Genera tu código QR para retirar dinero sin tu tarjeta:',
+                      'Genera tu código QR para retirar\n dinero sin tu tarjeta:',
                       textAlign: TextAlign.center, // Asegura el centrado del texto en su línea
                       style: TextStyle(
                         color: Colors.lightBlue,

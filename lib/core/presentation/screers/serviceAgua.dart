@@ -8,7 +8,7 @@ class TransAgua extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Transferir',
+          'Pagar Aguakan',
           textAlign: TextAlign.center,
           style: TextStyle(
               fontSize: 28, color: Color.fromARGB(255, 242, 244, 250)),
