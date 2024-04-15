@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:safesuit_bank/core/presentation/screers/TransSelecionUser.dart';
 import 'package:safesuit_bank/core/presentation/screers/movimientos.dart';
 import 'package:safesuit_bank/core/presentation/screers/serviceCFE.dart';
 import 'package:safesuit_bank/core/presentation/screers/serviceAgua.dart';
 import 'package:safesuit_bank/core/presentation/screers/serviceTelcel.dart';
 import 'package:safesuit_bank/core/presentation/screers/PaymentQR.dart';
-import 'package:safesuit_bank/core/presentation/screers/transfer.dart';
 import 'package:safesuit_bank/main.dart';
 
 class HomeView extends StatelessWidget {
@@ -35,7 +35,7 @@ class HomeView extends StatelessWidget {
             title: const Text('Transferencias'),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Trans()));
+                  context, MaterialPageRoute(builder: (context) => TransUser()));
             }),
         ListTile(
           leading: const Icon(Icons.arrow_back),
@@ -102,7 +102,7 @@ class HomeView extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 11),
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 21),
                   ),
                 ),
                 Container(
