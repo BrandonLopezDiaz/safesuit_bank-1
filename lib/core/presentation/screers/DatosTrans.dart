@@ -8,23 +8,14 @@ class DataTrans extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Transferencias',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: TransferenciasPage(),
-    );
+    return const TransferenciasPage();
   }
 }
-
 
 class TransferenciasPage extends StatefulWidget {
   const TransferenciasPage({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _TransferenciasPageState createState() => _TransferenciasPageState();
 }
 
@@ -63,122 +54,112 @@ class _TransferenciasPageState extends State<TransferenciasPage> {
             const SizedBox(height: 59.0),
             Text(
               'Datos de emisor',
-              style: TextStyle(fontSize: 25, color: Color.fromARGB(255, 66, 79, 120),fontWeight: FontWeight.bold,),
+              style: TextStyle(fontSize: 25, color: Color.fromARGB(255, 66, 79, 120), fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(
-              padding: EdgeInsets.all(10),
-              width: 300, // Establece el ancho del contenedor
-              //height: 100, // Establece la altura del contenedor
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color:Color.fromARGB(255, 212, 205, 197)
-              ),
-              child: const Text(
-                "Datos de emisor de ejemplo ",
-                style: TextStyle(fontSize: 20,color: Color.fromARGB(255, 66, 79, 120))
-              ),
-            ),
-            const SizedBox(height: 45.0),
-            SizedBox(height: 20),
-            Text(
-              'Datos de receptor',
-              style: TextStyle(fontSize: 25, color: Color.fromARGB(255, 66, 79, 120),fontWeight: FontWeight.bold,),
-            ),
-            SizedBox(height: 10),
-            Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               width: 300,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color:Color.fromARGB(255, 212, 205, 197)
+                color: Color.fromARGB(255, 212, 205, 197),
               ),
-              child: Text(
+              child: const Text(
+                "Datos de emisor de ejemplo",
+                style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 66, 79, 120)),
+              ),
+            ),
+            const SizedBox(height: 65.0),
+            Text(
+              'Datos de receptor',
+              style: TextStyle(fontSize: 25, color: Color.fromARGB(255, 66, 79, 120), fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+            Container(
+              padding: const EdgeInsets.all(10),
+              width: 300,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Color.fromARGB(255, 212, 205, 197),
+              ),
+              child: const Text(
                 'Datos de receptor de ejemplo',
                 style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 66, 79, 120)),
               ),
             ),
-            const SizedBox(height: 45.0),
-            SizedBox(height: 20),
-            
+            const SizedBox(height: 65.0),
             Text(
               'Monto',
-              style: TextStyle(fontSize: 25, color: Color.fromARGB(255, 66, 79, 120),fontWeight: FontWeight.bold,),
+              style: TextStyle(fontSize: 25, color: Color.fromARGB(255, 66, 79, 120), fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               width: 300,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color:Color.fromARGB(255, 212, 205, 197)
+                color: Color.fromARGB(255, 212, 205, 197),
               ),
-              child: Text(
+              child: const Text(
                 '\$350',
                 style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 66, 79, 120)),
               ),
             ),
-            SizedBox(height: 100),
+            const SizedBox(height: 100),
             Padding(
-              padding: const EdgeInsets.only(left: 78.0), // Cambia el valor según tu necesidad
+              padding: const EdgeInsets.only(left: 78.0),
               child: ElevatedButton(
                 onPressed: () {
                   showDialog(
                     context: context,
-                    builder: (BuildContext context) { // Añade una coma aquí
+                    builder: (BuildContext context) {
                       return AlertDialog(
-                        contentPadding: EdgeInsets.only(top: 60,bottom: 0),
-                        
-                        title: Center(
+                        contentPadding: const EdgeInsets.only(top: 60, bottom: 0),
+                        title: const Center(
                           child: Text(
                             "Transferencia exitosa",
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              ),
+                            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                           ),
                         ),
-                        content:  Column(
+                        content: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             ElevatedButton(
                               onPressed: () {
                                 Navigator.of(context).pop();
-                                // Lógica para descargar el comprobante
                               },
                               style: ElevatedButton.styleFrom(
-                                minimumSize: Size(150, 60),
-                                foregroundColor: const Color.fromARGB(255,242, 244, 250),
-                                backgroundColor: const Color.fromARGB(255, 30, 136, 229)
+                                minimumSize: const Size(150, 60),
+                                foregroundColor: const Color.fromARGB(255, 242, 244, 250),
+                                backgroundColor: const Color.fromARGB(255, 30, 136, 229),
                               ),
-                              child: Text(
+                              child: const Text(
                                 "Descargar comprobante",
                                 style: TextStyle(fontSize: 18),
-                                ),
+                              ),
                             ),
-                            SizedBox(height: 20),
+                            const SizedBox(height: 20),
                             ElevatedButton(
                               onPressed: () {
                                 Navigator.of(context).pop();
                                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomeView()));
-                                 // Cierra el diálogo
                               },
                               style: ElevatedButton.styleFrom(
-                                minimumSize: Size(252, 60),
-                                foregroundColor: const Color.fromARGB(255,242, 244, 250),
-                                backgroundColor: const Color.fromARGB(255, 67, 160, 71)
+                                minimumSize: const Size(252, 60),
+                                foregroundColor: const Color.fromARGB(255, 242, 244, 250),
+                                backgroundColor: const Color.fromARGB(255, 67, 160, 71),
                               ),
-                              child: Text(
+                              child: const Text(
                                 "Salir",
                                 style: TextStyle(fontSize: 18),
-                                ),
+                              ),
                             ),
-                            SizedBox(height: 50),
+                            const SizedBox(height: 50),
                           ],
                         ),
                       );
-                    }, // Coma añadida aquí
+                    },
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -192,9 +173,6 @@ class _TransferenciasPageState extends State<TransferenciasPage> {
                 ),
               ),
             ),
-
-
-
           ],
         ),
       ),

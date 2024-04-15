@@ -7,14 +7,7 @@ class TransMont extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Transferencias',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: const TransferenciasPage(),
-    );
+    return const TransferenciasPage();
   }
 }
 
@@ -22,7 +15,6 @@ class TransferenciasPage extends StatefulWidget {
   const TransferenciasPage({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _TransferenciasPageState createState() => _TransferenciasPageState();
 }
 
@@ -102,7 +94,6 @@ class _TransferenciasPageState extends State<TransferenciasPage> {
                 style: TextStyle(fontSize: 20),
               ),
             ),
-            
             const SizedBox(height: 150.0),
           ],
         ),
@@ -110,4 +101,3 @@ class _TransferenciasPageState extends State<TransferenciasPage> {
     );
   }
 }
-

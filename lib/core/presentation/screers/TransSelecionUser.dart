@@ -7,14 +7,7 @@ class TransUser extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Transferencias',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: const TransferenciasPage(),
-    );
+    return const TransferenciasPage();
   }
 }
 
@@ -22,7 +15,6 @@ class TransferenciasPage extends StatefulWidget {
   const TransferenciasPage({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _TransferenciasPageState createState() => _TransferenciasPageState();
 }
 
@@ -50,40 +42,37 @@ class _TransferenciasPageState extends State<TransferenciasPage> {
           },
           child: const Icon(
             Icons.arrow_back,
-            color: Color.fromARGB(255, 242, 244, 250),
+            color: Color.fromARGB(255, 0, 0, 0),
             size: 32,
           ),
         ),
       ),
       body: Center(
-        
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             const SizedBox(height: 59.0),
             ElevatedButton(
-            
-            onPressed: () {
-              // Lógica para agregar un nuevo usuario si es necesario
-            },
-            style: ElevatedButton.styleFrom(
-              foregroundColor: const Color.fromARGB(255, 0, 43, 135),
-              backgroundColor: const Color.fromARGB(255, 212, 205, 197),
-              minimumSize: const Size(358, 100),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
+              onPressed: () {
+                // Lógica para agregar un nuevo usuario si es necesario
+              },
+              style: ElevatedButton.styleFrom(
+                foregroundColor: const Color.fromARGB(255, 0, 43, 135),
+                backgroundColor: const Color.fromARGB(255, 212, 205, 197),
+                minimumSize: const Size(358, 100),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                alignment: Alignment.centerLeft, // Alinea el texto a la izquierda
               ),
-              alignment: Alignment.centerLeft, // Alinea el texto a la izquierda
+              child: Text(
+                'Agregar usuario',
+                style: TextStyle(fontSize: 20),
+              ),
             ),
-            child: Text(
-              'Agregar usuario',
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
 
-          const SizedBox(height: 50.0),
-
+            const SizedBox(height: 50.0),
 
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
